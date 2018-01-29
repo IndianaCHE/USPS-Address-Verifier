@@ -27,7 +27,7 @@ Great for cleansing database of users and validate their mailing addresses.
 
 - Generates the output files in a Results folder by default. This folder is auto created in the input file directory by defailt. This can be changes anytime by specifying the output directory.
 
-- Properly formats the mailing addresses in the format provided by USPS. For instance, the tool auto corrects `2705 granada circle west` to `2705 GRANADA CIR W`.
+- Properly formats the mailing addresses in the format provided by USPS. For instance, the tool auto corrects `101 west ohio street` to `101 W OHIO ST`.
 
 - Auto detects headers then auto selects them. User may change them on their own.
 
@@ -59,7 +59,7 @@ After that click on `Save` and choose `Done`.
 
 Once the setup is complete you may use the tool to validate mailing addresses from csv files.
 
-![UI](USPS Address Verifier/Resources/UI.png "USPS Address Verification tool UI")
+![UI](USPS-Address-Verifier/Resources/UI.png "USPS Address Verification tool UI")
 
 ##### 1. Opening a csv file
 Click on the `Browse` button next to the Input File text box. The Windows Folder Browser opens up prompting you to
@@ -73,9 +73,9 @@ By default, the output directory is the same as your input file directory. If yo
 Each csv file represents a table of data. Therefore, each file contains column headers and data is separated into columns. For instance,
 a csv file containing address data for some people may be visualized as:
 
-ID     | Name      | Address1           | Address2 | City     | State | ZipCode
--------|-----------|--------------------|----------|----------|-------|---------
-123456 |John White | 2705 GRANADA CIR W | Apt #314 | Lawrence | IN    | 46236
+ID     | Name      | Address1      | Address2 | City     | State | ZipCode
+-------|-----------|---------------|----------|----------|-------|---------
+123456 |John White | 101 W OHIO ST | Apt #314 | Lawrence | IN    | 46236
 
 Here `Street Address` is `Address1` column, `Apt/Box Number` is `Address2` column, `City` is `City` column, `State` is `State` column, and
 `Zip Code` is `ZipCode` column.
