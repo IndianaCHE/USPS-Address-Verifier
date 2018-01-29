@@ -59,7 +59,7 @@ After that click on `Save` and choose `Done`.
 
 Once the setup is complete you may use the tool to validate mailing addresses from csv files.
 
-![UI](USPS-Address-Verifier/Resources/UI.png "USPS Address Verification tool UI")
+![UI](Resources/UI.png "USPS Address Verification tool UI")
 
 ##### 1. Opening a csv file
 Click on the `Browse` button next to the Input File text box. The Windows Folder Browser opens up prompting you to
