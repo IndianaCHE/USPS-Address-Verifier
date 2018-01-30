@@ -24,7 +24,7 @@ namespace USPS_Address_Verifier
         }
 
         /// <summary>
-        /// Event handler for Input File Browse button click
+        /// Event handler for Input File Browse button click.
         /// </summary>
         private void browseButton_Click(object sender, EventArgs e)
         {
@@ -103,6 +103,9 @@ namespace USPS_Address_Verifier
             }
         }
 
+        /// <summary>
+        /// Event handler for Output Directory Browse Button click.
+        /// </summary>
         private void browseButton2_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
@@ -116,6 +119,9 @@ namespace USPS_Address_Verifier
             }
         }
 
+        /// <summary>
+        /// Event handler for Run Scan button click.
+        /// </summary>
         private void validateButton_Click(object sender, EventArgs e)
         {
             if (Properties.Settings.Default["USPS_ID"].ToString() != "")
@@ -150,6 +156,9 @@ namespace USPS_Address_Verifier
             }
         }
 
+        /// <summary>
+        /// Cancels the async task.
+        /// </summary>
         private void cancelButton_Click(object sender, EventArgs e)
         {
             var message = "The program is still running. \nAre you sure you want to cancel?";
@@ -164,6 +173,9 @@ namespace USPS_Address_Verifier
             }
         }
 
+        /// <summary>
+        /// Background worker to carry out the async task of validating a csv file.
+        /// </summary>
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
             BackgroundWorker worker = sender as BackgroundWorker;
@@ -175,6 +187,9 @@ namespace USPS_Address_Verifier
             validateCsv.Validate((Dictionary<string,Tuple<string,int>>)e.Argument, numberOfRecords, worker, e);
         }
 
+        /// <summary>
+        /// Event handler on completion of async task.
+        /// </summary>
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             if (e.Error != null)

@@ -22,7 +22,7 @@ namespace USPS_Address_Verifier
         private bool _TestMode;
 
         /// <summary>
-        /// Creates a new USPS Address Validator instance
+        /// Creates a new USPS Address Validator instance.
         /// </summary>
         /// <param name="USPSWebtoolUserID">The UserID required by the USPS Web Tools</param>
         public Validator(string USPSWebtoolUserID)
@@ -33,7 +33,7 @@ namespace USPS_Address_Verifier
         }
 
         /// <summary>
-        /// Creates a new USPS Address Validator instance
+        /// Creates a new USPS Address Validator instance.
         /// </summary>
         /// <param name="USPSWebtoolUserID">The UserID required by the USPS Web Tools</param>
         /// <param name="testmode">If True, then the USPS Test URL will be used</param>
@@ -45,7 +45,7 @@ namespace USPS_Address_Verifier
         }
 
         /// <summary>
-        /// Determines if the Calls to the USPS server is made to the Test or Production server
+        /// Determines if the Calls to the USPS server is made to the Test or Production server.
         /// </summary>
         public bool TestMode
         {
@@ -54,7 +54,7 @@ namespace USPS_Address_Verifier
         }
 
         /// <summary>
-        /// Gets the URL depending on value of TestMode
+        /// Gets the URL depending on value of TestMode.
         /// </summary>
         /// <returns>The URL</returns>
         private string GetURL()
@@ -66,7 +66,7 @@ namespace USPS_Address_Verifier
         }
 
         /// <summary>
-        /// Validates the address
+        /// Validates an address.
         /// </summary>
         /// <param name="address">Address object to be validated</param>
         /// <returns>Dictionary representing the address or error</returns>

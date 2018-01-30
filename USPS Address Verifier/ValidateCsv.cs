@@ -16,7 +16,7 @@ using System.Linq;
 
 namespace USPS_Address_Verifier
 {
-    class ValidateCsv
+    public class ValidateCsv
     {
         private string file = "";               // file path for input file
         private string outPath = "";            // output files directory

@@ -119,7 +119,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="LumenWorks.Framework.IO\Csv\.DS_Store" />
-    <None Include="PROJECT-DOC.md" />
+    <None Include="README.md" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

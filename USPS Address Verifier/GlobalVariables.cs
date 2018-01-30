@@ -32,7 +32,7 @@ namespace USPS_Address_Verifier
         public static void SetTotalActionReq(int newNum) { TotalActionReq = newNum; }
 
         /// <summary>
-        /// Sets everything back to default.
+        /// Resets everything back to default.
         /// </summary>
         public static void SetAllDefault()
         {
