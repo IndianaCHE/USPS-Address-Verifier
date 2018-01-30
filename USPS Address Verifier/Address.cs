@@ -25,17 +25,13 @@ namespace USPS_Address_Verifier
 
         private string _Address1 = "";
         /// <summary>
-        /// Address Line 1 is used to provide an apartment or suite
-        /// number, if applicable. Maximum characters allowed: 38
+        /// Apartment or suite number, if applicable
         /// </summary>
         public string Address1
         {
             get { return _Address1; }
             set { _Address1 = value.Replace('#', ' ');
-                //_Address1 = Regex.Replace(_Address1, @"(?<=\d)(?=\p{L})", " ");
-                //_Address1 = Regex.Replace(_Address1, @"(?=\p{L})(?<=\d)", " ");
-                _Address1 = Regex.Replace(_Address1, "[.-]", " ");
-            }
+                  _Address1 = Regex.Replace(_Address1, "[.-]", " "); }
         }
 
         private string _Address2 = "";
@@ -46,17 +42,13 @@ namespace USPS_Address_Verifier
         public string Address2
         {
             get { return _Address2; }
-            set {
-                _Address2 = value.ToLower();
-                _Address2 = _Address2.Replace('#', ' ');
-            }
+            set { _Address2 = value.ToLower();
+                  _Address2 = _Address2.Replace('#', ' '); }
         }
 
         private string _City = "";
         /// <summary>
-        /// City
-        /// Either the City and State or Zip are required.
-        /// Maximum characters allowed: 15
+        /// City name
         /// </summary>
         public string City
         {
@@ -66,9 +58,7 @@ namespace USPS_Address_Verifier
 
         private string _State = "";
         /// <summary>
-        /// State
-        /// Either the City and State or Zip are required.
-        /// Maximum characters allowed = 2
+        /// State name
         /// </summary>
         public string State
         {
@@ -79,7 +69,6 @@ namespace USPS_Address_Verifier
         private string _Zip = "";
         /// <summary>
         /// Zipcode
-        /// Maximum characters allowed = 5
         /// </summary>
         public string Zip
         {
@@ -90,7 +79,6 @@ namespace USPS_Address_Verifier
         private string _ZipPlus4 = "";
         /// <summary>
         /// Zip code extension
-        /// Maximum characters allowed = 4
         /// </summary>
         public string ZipPlus4
         {
@@ -103,7 +91,7 @@ namespace USPS_Address_Verifier
         //////////////////////////////////////////////////////////////////////////
 
         /// <summary>
-        /// Get a dictionary object representing an address from a xml string.
+        /// Returns a dictionary object representing an address from a xml string.
         /// </summary>
         /// <param name="xml">XML representation of an Address Object</param>
         /// <returns>Dictionary object containing address information</returns>
@@ -163,7 +151,7 @@ namespace USPS_Address_Verifier
         }
 
         /// <summary>
-        /// Get the Xml representation of this address object
+        /// Returns the Xml representation of this address object
         /// </summary>
         /// <returns>String</returns>
         public string ToXml()
@@ -181,6 +169,9 @@ namespace USPS_Address_Verifier
 
         public bool modified = false;
 
+        /// <summary>
+        /// Modifies an address to the correct form
+        /// </summary>
         public void ModifyAddress()
         {
             _Address2 = Regex.Replace(_Address2, @"(\p{L})?(\d+)(st|[nr]d|th|(\p{L}+))", repl);
@@ -208,7 +199,7 @@ namespace USPS_Address_Verifier
             res.Append(m.Groups[2].Value);  // Add Group 2 value (number)
             if (m.Groups[4].Success)        // If there is a word (not st/th/rd/nd suffix)...
                 res.Append(" ");            // Add a space to separate the number from the word
-            res.Append(m.Groups[3]);         // Add what was captured in Group 3
+            res.Append(m.Groups[3]);        // Add what was captured in Group 3
             return res.ToString();
         }
 
