@@ -1,4 +1,5 @@
-﻿## README
+
+## USPS Address Verification Tool v.1
 
 #### To-dos:
 - [x] Make fields optional
@@ -7,19 +8,44 @@
 - [ ] Finish how-to and about window
 
 ### Table of Contents
-1. [Introduction](#introduction)
-   1. [Features](#features)
-   2. [About](#about)
+1. [Getting Started](#getting-started)
+   1. [Prerequisites](#prerequisites)
+   2. [Installing](#installing)
+   3. [Features](#features)
+   4. [About](#about)
 2. [How-to](#how-to)
    1. [Setup](#setup)
    2. [Use the Tool](#use-the-tool)
 3. [Code Documentation](#code-documentation)
-4. [License](#license)
+4. [Planned Features in v.2](#planned-features)
+5. [License](#license)
 ----
 
-### Introduction
+### Getting Started<a name="getting-started" />
+
 **USPS Address Verification Tool** - a tool designed to read Comma-Separated Values files for addresses and verify them against the USPS database.
 Great for cleansing database of users and validate their mailing addresses.
+
+#### Prerequisites
+
+- Windows 7 and/or higher
+- .NET 4.5 (recommended)
+
+#### Installing
+
+To clone the project in your Windows machine:
+1. Install [git](https://desktop.github.com/) on your machine.
+2. Open Git Shell. Type in your desired directory using
+```
+$ cd your_directory
+```
+3. Clone the repository using
+```
+$ git clone https://github.com/IndianaCHE/USPS-Address-Verifier
+```
+4. Open `USPS Address Verifier.sln` using Visual Studio IDE.
+
+Alternatively you may simply download the [portable version](USPS Address Verifier.exe) of the tool if you do not want to compile and build it yourself.
 
 #### Features
 
@@ -73,15 +99,15 @@ By default, the output directory is the same as your input file directory. If yo
 Each csv file represents a table of data. Therefore, each file contains column headers and data is separated into columns. For instance,
 a csv file containing address data for some people may be visualized as:
 
-ID     | Name      | Address1      | Address2 | City     | State | ZipCode
--------|-----------|---------------|----------|----------|-------|---------
-123456 |John White | 101 W OHIO ST | Apt #314 | Lawrence | IN    | 46236
+ID     | Name      | Address1      | Address2 | City         | State | ZipCode
+-------|-----------|---------------|----------|--------------|-------|---------
+123456 |John White | 101 W OHIO ST | Apt #314 | Indianapolis | IN    | 46204
 
 Here `Street Address` is `Address1` column, `Apt/Box Number` is `Address2` column, `City` is `City` column, `State` is `State` column, and
 `Zip Code` is `ZipCode` column.
 
 When you load a csv file, the tool tries to detect and select the columns automatically. However the tool may not always select the correct ones,
-especially if their names are not conventional. Therefore ***it is imperative*** that you select the proper column headers, otherwise the tool may 
+especially if their names are not conventional. Therefore ***it is imperative*** that you select the proper column headers, otherwise the tool may
 return your addresses as invalid.
 
 After you select the proper column headers or verify that the tool selected the correct ones, you may click the `Run Scan` button to start the
@@ -101,12 +127,21 @@ Street Addresses, Apartment/Box Numbers, City, State, Zip Codes must all be in s
 due to various naming conventions. So make sure to check the header boxes before running the scan.
 - Select "None" for headers which are not applicable to your file.
 - If you do not specify an output directory, the tool will create a "Results" folder in the directory your input file is located in.
+- It is highly recommended that you name your column headers with conventional names such as "Address1" for Street Addresses, "Address2" for Apartment/Box Info, "City", "State", "Zip" for Cities, States, and Zip Codes respectively.
 
 ----
 
 ### Code Documentation<a name="code-documentation" />
 
+Refer to the [PROJECT-DOC](USPS Address Verifier/PROJECT-DOC.md) file for complete code documentation.
+
 ----
+
+### Planned Features in v.2<a name="planned-features" />
+
+- Ability to read Excel files.
+
+---
 
 ### License
 
