@@ -13,7 +13,7 @@
 
 ----
 
-### 1. Address Class
+### 1. Address Class<a name="address-class" />
 
 [Address class](Address.cs) defines an address object. Also contains a function to return address from an XML object.
 
@@ -47,7 +47,7 @@ public class Address
 
 ----
 
-### 2. CsvWriter Class
+### 2. CsvWriter Class<a name="csvwriter-class" />
 
 [CsvWriter class](CsvWriter.cs) is a helper class to write data into csv files.
 
@@ -73,7 +73,7 @@ public class CsvWriter
 
 ----
 
-### 3. GlobalVariables Class
+### 3. GlobalVariables Class<a name="globalvariables-class" />
 
 [GlobalVariables class](GlobalVariables.cs) is a static class which holds and manages the global stats values for every run.
 
@@ -101,7 +101,7 @@ public static class GlobalVariables
 
 ----
 
-### 4. ScanResults Class
+### 4. ScanResults Class<a name="scanresults-class" />
 
 [ScanResults class](ScanResults.cs) displays the results of the csv file scan. It is inherited from System.Windows.Form class.
 
@@ -121,7 +121,7 @@ public partial class ScanResults : Form
 
 ----
 
-### 5. USPS_ID Class
+### 5. USPS_ID Class<a name="usps_id-class" />
 
 [USPS_ID class](USPS_ID.cs) displays the window form to edit/save the user's USPS Id. It is inherited from System.Windows.Form class.
 
@@ -144,7 +144,7 @@ public partial class USPS_ID : Form
 
 ----
 
-### 6. ValidateCsv Class
+### 6. ValidateCsv Class<a name="validatecsv-class" />
 
 [ValidateCsv class](ValidateCsv.cs) utilizes [CsvReader](LumenWorks.Framework.IO/Csv/CsvReader.cs) and [Validator](Validator.cs) classes to read through a csv file and retrieve proper address fields and validate them against the USPS database.
 
@@ -171,7 +171,7 @@ public class ValidateCsv
 
 ----
 
-### 7. Validator Class
+### 7. Validator Class<a name="validator-class" />
 
 [Validator class](Validator.cs) Checks the validity of an address using USPS API.
 
@@ -202,7 +202,7 @@ public class Validator
 
 ----
 
-### 8. ValidatorUI Class
+### 8. ValidatorUI Class<a name="validatorui-class" />
 
 [ValidatorUI class](ValidatorUI.cs) displays the window form to retrieve input file, set output directory, select column headers, and run the validation process. It is inherited from System.Windows.Form class.
 
