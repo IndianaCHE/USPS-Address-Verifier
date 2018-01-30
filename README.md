@@ -2,12 +2,15 @@
 ## USPS Address Verification Tool v.1
 
 #### To-dos:
+
 - [x] Make fields optional
 - [x] Implement auto detection and selection of header fields
+- [ ] Log Writer
 - [ ] Add more comments to code and build documentation
 - [ ] Finish how-to and about window
 
 ### Table of Contents
+
 1. [Getting Started](#getting-started)
    1. [Prerequisites](#prerequisites)
    2. [Installing](#installing)
@@ -19,6 +22,7 @@
 3. [Code Documentation](#code-documentation)
 4. [Planned Features in v.2](#planned-features)
 5. [License](#license)
+
 ----
 
 ### Getting Started<a name="getting-started" />
@@ -114,12 +118,10 @@ After you select the proper column headers or verify that the tool selected the 
 validation process.
 
 ##### 4. Monitoring the progress of the tool
-
 On the bottom of the tool's UI, there is a progress bar which gives you a real time indicaton of the scan progress. Some files may be very big (thousands of rows) and
 may take time to get validated. The progress bar is there to assure you that the tool is active and working on validating your csv file.
 
 ##### Things to take note of
-
 - You are required to have the different parts of the mailing addresses separated into different columns, i.e.,
 Street Addresses, Apartment/Box Numbers, City, State, Zip Codes must all be in separate columns.
 - Apartment/Box numbers are optional but the rest are required to properly validate an address.
@@ -133,7 +135,7 @@ due to various naming conventions. So make sure to check the header boxes before
 
 ### Code Documentation<a name="code-documentation" />
 
-Refer to the [PROJECT-DOC](USPS Address Verifier/PROJECT-DOC.md) file for complete code documentation.
+Refer to the [README](USPS%20Address%20Verifier/README.md) file in the project folder for complete code documentation.
 
 ----
 
