@@ -23,6 +23,9 @@ namespace USPS_Address_Verifier
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Event handler for Input File Browse button click
+        /// </summary>
         private void browseButton_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -42,13 +45,14 @@ namespace USPS_Address_Verifier
                 try
                 {
                     filepath_box.Text = openFileDialog.FileName;
+
                     using (CsvReader csv = new CsvReader(new StreamReader(filepath_box.Text), true))
                     {
                         var headers = csv.GetFieldHeaders();
 
                         ComboBox[] boxes = new ComboBox[] { stAddrBox, aptBox, cityBox, stateBox, zipBox };
 
-                        // reset the box selections and add new headers and None field
+                        // reset the box selections and add new headers and None field for all combo boxes
                         foreach (var box in boxes)
                         {
                             box.Items.Clear();

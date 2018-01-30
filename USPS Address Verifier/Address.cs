@@ -159,7 +159,6 @@ namespace USPS_Address_Verifier
                 formattedAddress.Append("-" + element.InnerText);
             }
 
-            //address.Add("Formatted Address",formattedAddress.ToString());
             return address;
         }
 
