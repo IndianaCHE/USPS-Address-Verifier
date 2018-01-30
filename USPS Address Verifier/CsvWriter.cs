@@ -1,5 +1,5 @@
 ﻿/*
-    CsvWriter.cs - Helper class to write data into csv files
+    CsvWriter.cs - Helper class to write data into csv files.
     Author: Nidesh Chitrakar (nideshchitrakar)
     Date: 01/09/2018
 */

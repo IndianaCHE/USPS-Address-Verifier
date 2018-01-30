@@ -151,7 +151,7 @@ namespace USPS_Address_Verifier
         }
 
         /// <summary>
-        /// Returns the Xml representation of this address object
+        /// Returns the Xml representation of this address object.
         /// </summary>
         /// <returns>String</returns>
         public string ToXml()
@@ -170,7 +170,7 @@ namespace USPS_Address_Verifier
         public bool modified = false;
 
         /// <summary>
-        /// Modifies an address to the correct form
+        /// Modifies an address to the correct form.
         /// </summary>
         public void ModifyAddress()
         {

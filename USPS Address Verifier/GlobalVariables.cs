@@ -8,6 +8,9 @@ namespace USPS_Address_Verifier
 {
     public static class GlobalVariables
     {
+        /// <summary>
+        /// Stores the default values for stats.
+        /// </summary>
         static GlobalVariables()
         {
             TimeElapsed = "";
@@ -28,6 +31,9 @@ namespace USPS_Address_Verifier
         public static int TotalActionReq { get; private set; }
         public static void SetTotalActionReq(int newNum) { TotalActionReq = newNum; }
 
+        /// <summary>
+        /// Sets everything back to default.
+        /// </summary>
         public static void SetAllDefault()
         {
             TimeElapsed = "";
