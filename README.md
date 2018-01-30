@@ -45,7 +45,7 @@ $ git clone https://github.com/IndianaCHE/USPS-Address-Verifier
 ```
 4. Open `USPS Address Verifier.sln` using Visual Studio IDE.
 
-Alternatively you may simply download the [portable version](USPS Address Verifier.exe) of the tool if you do not want to compile and build it yourself.
+Alternatively you may simply download the [portable version](USPS%20Address%20Verifier.exe) of the tool if you do not want to compile and build it yourself.
 
 #### Features
 
