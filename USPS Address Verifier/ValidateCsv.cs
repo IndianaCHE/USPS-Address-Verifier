@@ -156,7 +156,7 @@ namespace USPS_Address_Verifier
                             }
                             row[fileHeaders["Street Address"].Item2] = result["Street Address"];
                             if (result.ContainsKey("Apt / Suite / Other")) row[fileHeaders["Apt Number"].Item2] = result["Apt / Suite / Other"];
-                            else row.Add(" ");
+                            //else row.Add(" ");
                             row[fileHeaders["City"].Item2] = result["City"];
                             row[fileHeaders["State"].Item2] = result["State"];
                             row[fileHeaders["ZipCode"].Item2] = result["Zip5"];
