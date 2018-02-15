@@ -216,6 +216,9 @@ namespace USPS_Address_Verifier
             toggleInteractivity(true);
         }
 
+        /// <summary>
+        /// Toggles the Enabled property of UI components.
+        /// </summary>
         private void toggleInteractivity(bool enable)
         {
             var toggle = true;
@@ -235,13 +238,19 @@ namespace USPS_Address_Verifier
             outpath_box.Enabled = toggle;
             browseButton2.Enabled = toggle;
         }
-
+        
+        /// <summary>
+        /// Event handler for change in progress of background worker.
+        /// </summary>
         private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
             progressBar.Value = e.ProgressPercentage;
             progressLabel.Text = progressBar.Value.ToString() + "% Complete";
         }
 
+        /// <summary>
+        /// Event handler for press of application close button.
+        /// </summary>
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             if (backgroundWorker1.IsBusy)
@@ -281,7 +290,14 @@ namespace USPS_Address_Verifier
         
         private void howToToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //Application.Exit();
+            HowTo howTo = new HowTo();
+            howTo.Show();
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            About about = new About();
+            about.Show();
         }
     }
 }
