@@ -134,7 +134,6 @@
             this.stAddrBox.Size = new System.Drawing.Size(121, 24);
             this.stAddrBox.TabIndex = 7;
             this.stAddrBox.Text = "Address";
-            //this.stAddrBox.SelectedIndexChanged += new System.EventHandler(this.stAddrBox_SelectedIndexChanged);
             // 
             // aptBox
             // 
@@ -145,7 +144,6 @@
             this.aptBox.Size = new System.Drawing.Size(121, 24);
             this.aptBox.TabIndex = 8;
             this.aptBox.Text = "Address";
-            //this.aptBox.SelectedIndexChanged += new System.EventHandler(this.aptBox_SelectedIndexChanged);
             // 
             // cityBox
             // 
@@ -156,7 +154,6 @@
             this.cityBox.Size = new System.Drawing.Size(121, 24);
             this.cityBox.TabIndex = 9;
             this.cityBox.Text = "City";
-            //this.cityBox.SelectedIndexChanged += new System.EventHandler(this.cityBox_SelectedIndexChanged);
             // 
             // stateBox
             // 
@@ -167,7 +164,6 @@
             this.stateBox.Size = new System.Drawing.Size(121, 24);
             this.stateBox.TabIndex = 10;
             this.stateBox.Text = "State";
-            //this.stateBox.SelectedIndexChanged += new System.EventHandler(this.stateBox_SelectedIndexChanged);
             // 
             // zipBox
             // 
@@ -178,7 +174,6 @@
             this.zipBox.Size = new System.Drawing.Size(121, 24);
             this.zipBox.TabIndex = 11;
             this.zipBox.Text = "Zip";
-            //this.zipBox.SelectedIndexChanged += new System.EventHandler(this.zipBox_SelectedIndexChanged);
             // 
             // headersLabel
             // 
@@ -329,15 +324,16 @@
             // howToToolStripMenuItem
             // 
             this.howToToolStripMenuItem.Name = "howToToolStripMenuItem";
-            this.howToToolStripMenuItem.Size = new System.Drawing.Size(137, 26);
+            this.howToToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.howToToolStripMenuItem.Text = "How-To";
             this.howToToolStripMenuItem.Click += new System.EventHandler(this.howToToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(137, 26);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // ValidatorUI
             // 

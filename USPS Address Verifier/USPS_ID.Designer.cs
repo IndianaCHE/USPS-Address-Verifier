@@ -130,6 +130,7 @@
             this.Controls.Add(this.uspsIdDescription1);
             this.Controls.Add(this.uspsIdLabel);
             this.Controls.Add(this.uspsIdBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "USPS_ID";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
