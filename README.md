@@ -6,8 +6,8 @@
 - [x] Make fields optional
 - [x] Implement auto detection and selection of header fields
 - [ ] Log Writer
-- [ ] Add more comments to code and build documentation
-- [ ] Finish how-to and about window
+- [x] Add more comments to code and build documentation
+- [x] Finish how-to and about window
 
 ### Table of Contents
 
