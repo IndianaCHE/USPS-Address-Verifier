@@ -53,9 +53,9 @@ Alternatively you may simply download the [portable version](USPS%20Address%20Ve
 
 #### Features
 
-- Takes in a csv file and genertes three csv files - one each for correct addresses, incorrect addresses, and addresses which require certain actions (missing info, multiple mailing addresses found, etc). For error and action lists the tool also generates appropriate message for every entry.
+- Takes in a csv file and generates three csv files - one each for correct addresses, incorrect addresses, and addresses which require certain actions (missing info, multiple mailing addresses found, etc). For error and action lists the tool also generates appropriate message for every entry.
 
-- Generates the output files in a Results folder by default. This folder is auto created in the input file directory by defailt. This can be changes anytime by specifying the output directory.
+- Generates the output files in a Results folder by default. This folder is auto created in the input file directory by default. This can be changes anytime by specifying the output directory.
 
 - Properly formats the mailing addresses in the format provided by USPS. For instance, the tool auto corrects `101 west ohio street` to `101 W OHIO ST`.
 
@@ -118,7 +118,7 @@ After you select the proper column headers or verify that the tool selected the 
 validation process.
 
 ##### 4. Monitoring the progress of the tool
-On the bottom of the tool's UI, there is a progress bar which gives you a real time indicaton of the scan progress. Some files may be very big (thousands of rows) and
+On the bottom of the tool's UI, there is a progress bar which gives you a real time indication of the scan progress. Some files may be very big (thousands of rows) and
 may take time to get validated. The progress bar is there to assure you that the tool is active and working on validating your csv file.
 
 ##### Things to take note of
